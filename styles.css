@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    max-height: 100vh;
+    background-color: rgb(245,244,17);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    max-width: 280px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.gameSquare {
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 35px;
+    width: 35px;
+    margin: 3px;
+}
+
+.populateGame {
+border: 5px solid white;
+background-color: black;
+border-radius: 20px;
+width: 300px;
+min-width: 300px;
+height: 260px;
+padding: 15px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column-reverse;
+margin: 0 auto;
+margin-top: 30px;
+}
+
+.innerCircle{
+    transition: .2s;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.innerCircle:hover{
+    background-color: rgb(206, 229, 249);
+}
+
+.blueCircle{
+    background-color: rgb(62, 62, 229);
+}
+
+.redCircle{
+    background-color: rgb(213, 34, 34);
+}
+
+.innerRed:hover {
+    background-color: rgb(213, 34, 34);
+}
+
+.innerBlue:hoverc{
+    background-color: rgb(62, 62, 229);
+}
+
+.playerContainer {
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bluePLayer,
+.redPLayer {
+    border: 6px solid rgb(255, 255, 255);
+    border-radius: 10px;
+   width: 120px;
+   text-align: center;
+   background-color: black;
+}
+
+.innerRed,
+.innerBlue {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.innerBlue{
+    border: 5px solid rgb(0, 0, 255);
+    background-color: rgb(70, 70, 255);
+    box-sizing: border-box;
+}
+
+.innerRed{
+    border: 5px solid rgb(228, 0, 0);
+    background-color: rgb(255, 44, 44);
+    box-sizing: border-box;
+}
+
+.redPLayerName{
+    color: rgb(228, 0, 0);
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.bluePLayerName{
+    color: rgb(0, 0, 255);
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.bluePLayerName {
+    margin-bottom: 10px;
+}
+
+.redPLayerName {
+    margin-bottom: 10px;
+}
+
+.hiddenBase{
+    display: none;
+}
+
+.indicateTurn {
+    transition: .2s;
+    border: 6px solid rgb(245, 244, 17);
+    animation: pulse 2s infinite;
+ }
+ 
+ @keyframes pulse {
+    0% {
+       border-color: rgb(252, 252, 33);
+    }
+    50% {
+       border-color: rgb(217, 217, 2); 
+    }
+    100% {
+       border-color: rgb(245, 244, 17);
+    }
+ }
+ 
+
+.winningPlayer{
+border-color: rgb(123, 255, 47);
+}
+
+.gameUpdate{
+    min-height: 25px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.newGameButton{
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 7px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(245,244,17);
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.newGameButton:hover{
+    background-color: rgb(50, 50, 50);
+}
