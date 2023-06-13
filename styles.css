@@ -36,34 +36,47 @@ margin-top: 30px;
 }
 
 .innerCircle{
-    transition: .2s;
+    transition: .3s;
     border: 1px solid black;
     border-radius: 50%;
     width: 34px;
     height: 34px;
     margin: 0 auto;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .innerCircle:hover{
-    background-color: rgb(206, 229, 249);
+    background-color: rgb(245, 244, 17);
 }
 
+
 .blueCircle{
-    background-color: rgb(62, 62, 229);
+    box-sizing: border-box;
+    border: 6px solid rgb(0, 0, 255);
+    background-color: rgb(70, 70, 255);
+    cursor: default;
+
+}
+
+.blueCircle:hover{
+  background-color: rgb(70, 70, 255);
+
 }
 
 .redCircle{
-    background-color: rgb(213, 34, 34);
+    box-sizing: border-box;
+    border: 6px solid rgb(228, 0, 0);
+    background-color: rgb(255, 44, 44);
+    cursor: default;
 }
 
-.innerRed:hover {
-    background-color: rgb(213, 34, 34);
+.redCircle:hover{
+    background-color: rgb(255, 44, 44);
+
 }
 
-.innerBlue:hoverc{
-    background-color: rgb(62, 62, 229);
-}
+
 
 .playerContainer {
     border: 5px solid rgb(0, 0, 0);
@@ -103,7 +116,9 @@ margin-top: 30px;
     border: 5px solid rgb(0, 0, 255);
     background-color: rgb(70, 70, 255);
     box-sizing: border-box;
+    
 }
+
 
 .innerRed{
     border: 5px solid rgb(228, 0, 0);
@@ -148,7 +163,7 @@ margin-top: 30px;
        border-color: rgb(252, 252, 33);
     }
     50% {
-       border-color: rgb(217, 217, 2); 
+       border-color: rgb(249, 249, 109); 
     }
     100% {
        border-color: rgb(245, 244, 17);

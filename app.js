@@ -20,21 +20,24 @@ let moveCount = 0;
 let currentTurn = "blue";
 let winner = false;
 
-
+//function to populate the game board using the gameArrays array 
 function populateFunction() {
     for (let i = 0; i < gameArrays.length; i++) {
       for (let n = 0; n < gameArrays[i].length; n++) {
         const gameSquare = document.createElement("div");
         const innerCircle = document.createElement("div");
 
+        //variables for col and row values
         const cellCol = i;
         const cellRow = n;
 
+        //in the cell row is 0 then add a class of taken - this acts as a base for the cells above it to be played. 
         if (cellRow === 0) {
             gameSquare.classList.add("hiddenBase")
             innerCircle.innerText = "Taken"
         }
-  
+        
+        //variable for a unique cell number to be added to each cell using their row and col values  
         let cellNumber = `col${i}row${n}`;
         gameSquare.classList.add(cellNumber);
         gameSquare.title = cellNumber;
@@ -47,12 +50,9 @@ function populateFunction() {
         // Add click event listener to the game square
         innerCircle.addEventListener("click", function () {
 
-        //   console.log(`Column: ${cellCol + 1}, Row: ${cellRow + 1}`)
-
+        //variables for current and previous cells 
         const previousCell = document.querySelector(`.col${i}row${n-1}`);
         const currentCell = document.querySelector(`.col${i}row${n}`);
-
-// console.log(currentCell)
 
             if (winner === false) {
             if(currentCell.classList.contains("blueOccupied") ||
@@ -60,10 +60,12 @@ function populateFunction() {
                 return
             }
 
+            //check if the cell below the clicked cell is taken (as you can only play a move in the bottom most available cell in a column )
             else if (previousCell.innerText === "Taken" || 
                     previousCell.classList.contains("blueOccupied") || 
                     previousCell.classList.contains("redOccupied")){
 
+                //apply game logic and check for a winning combination
                 if (currentTurn === "blue"){
                     redPLayer.classList.add("indicateTurn");
                     bluePLayer.classList.remove("indicateTurn")
@@ -92,7 +94,7 @@ function populateFunction() {
     }
   }
 
-
+  // function that adds the winning class to the winning player. 
   function addWinningClass(currentPlayer) {
     bluePLayer.classList.remove("winningPlayer");
     redPLayer.classList.remove("winningPlayer");
@@ -198,12 +200,15 @@ function checkWin(colNum, rowNum, currentPlayer, playerClass) {
     }
   }
   
-  
-  document.addEventListener("DOMContentLoaded", populateFunction);
 
+// a fnction to reset the game for a new game 
   newGameButton.addEventListener("click", () => {
     const allSquares = document.querySelectorAll(".gameSquare");
     const allCircles = document.querySelectorAll(".innerCircle");
+    bluePLayer.classList.remove("winningPlayer");
+    redPLayer.classList.remove("winningPlayer");
+
+
     moveCount = 0;
 
     for( square of allSquares){
@@ -216,11 +221,14 @@ function checkWin(colNum, rowNum, currentPlayer, playerClass) {
         circle.classList.remove("redCircle");
     }
 
+
     winner = false;
     gameUpdate.innerText = ""
 
   });
 
+  //a function to call the populate function once the DOM has loaded. 
+  document.addEventListener("DOMContentLoaded", populateFunction);
 
 
   
