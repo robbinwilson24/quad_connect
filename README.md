@@ -25,13 +25,13 @@ Styles are updated dynamically throughout.
 
 ## Features <a name="features"></a>
 The game has the following features:
-    - Dynamic population of the game board grid from JavaScript based on the gameArrays data structure.
-    - The game enforces the rule that pieces stack from the bottom and cannot float.
-    - The current player's turn is indicated by highlighting their respective player element.
-    - Winning combinations are checked after each move to determine the winner.
-    - The winning player's class is updated, and a winning message is displayed.
-    - The game can detect a draw if no winner is found after 42 moves.
-    - The new game button allows resetting the game and clearing the game board.
+- Dynamic population of the game board grid from JavaScript based on the gameArrays data structure.
+- The game enforces the rule that pieces stack from the bottom and cannot float.
+- The current player's turn is indicated by highlighting their respective player element.
+- Winning combinations are checked after each move to determine the winner.
+- The winning player's class is updated, and a winning message is displayed.
+- The game can detect a draw if no winner is found after 42 moves.
+- The new game button allows resetting the game and clearing the game board.
 
 
 
